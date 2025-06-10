@@ -144,6 +144,8 @@
       .author-section {
         display: flex;
         align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
       }
       .faq-item {
         margin-bottom: 1rem;
@@ -168,6 +170,35 @@
         }
         .author-photo {
           margin-bottom: 1rem;
+        }
+      }
+      .author-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+      }
+      .author-photo {
+        width: 100px;
+        border-radius: 10%;
+        margin: 0;
+        background: #fff;
+      }
+      .qr-code {
+        width: 120px;
+        border-radius: 12px;
+        background: #fff;
+      }
+      @media (max-width: 800px) {
+        .author-section {
+          flex-direction: column;
+          gap: 1.5rem;
+          text-align: center;
+        }
+        .author-photo,
+        .qr-code {
+          margin: 0 auto;
+          width: 110px;
         }
       }
     </style>
@@ -279,19 +310,33 @@
       </section>
 
       <section class="about-author">
-        <h2>Sobre o Autor:</h2> <strong></strong>
-        <div class="author-section">
-          <img
-            src="./img/foto-perfil-relton-lima.jpg"
-            alt="Relton Lima"
-            class="author-photo"
-          />
-          <p>
-            <strong>Relton Lima <a href="http://instagram.com/reltonlima" target="_blank" style="color: #b084f5;" rel="noopener noreferrer">@reltonlima</a></strong> é um estrategista digital que cresceu
-            de forma orgânica nas redes sociais e decidiu ensinar outros
-            criadores a aplicar as mesmas técnicas que o levaram ao sucesso.
-          </p>
-          
+        <h2>Sobre o Autor:</h2>
+        <div class="author-section" style="display: flex; align-items: center; justify-content: space-between; gap: 2rem;">
+          <!-- Imagem à esquerda com link -->
+          <a href="https://www.instagram.com/reltonlima/" target="_blank" rel="noopener noreferrer">
+            <img
+              src="./img/foto-perfil-relton-lima.jpg"
+              alt="Relton Lima"
+              class="author-photo"
+              style="flex-shrink: 0;"
+            />
+          </a>
+          <!-- Texto centralizado -->
+          <div style="flex: 1; min-width: 0; text-align: center;">
+            <p style="font-size: 1.1rem;">
+              <strong>Relton Lima <a href="https://instagram.com/reltonlima" target="_blank" style="color: #b084f5;" rel="noopener noreferrer">@reltonlima</a></strong> é um estrategista digital que cresceu de forma orgânica nas redes sociais e decidiu ensinar outros criadores a aplicar as mesmas técnicas que o levaram ao sucesso.<br><br>
+              Siga no Instagram e acompanhe dicas exclusivas para acelerar seu crescimento digital!
+            </p>
+          </div>
+          <!-- Imagem à direita (QR Code Instagram) com link -->
+          <a href="https://www.instagram.com/reltonlima/" target="_blank" rel="noopener noreferrer">
+            <img
+              src="./img/qr-code-instagran-perfil-reltonlima.png"
+              alt="QR Code Instagram Relton Lima"
+              class="author-photo qr-code"
+              style="flex-shrink: 0; width: 120px; border-radius: 12px; background: #fff;"
+            />
+          </a>
         </div>
       </section>
 
